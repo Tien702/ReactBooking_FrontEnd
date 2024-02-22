@@ -15,6 +15,7 @@ class ModalEditUser extends Component {
             password: '',
             firstName: '',
             lastName: '',
+            phoneNumber:'',
             address: ''
         }
 
@@ -28,6 +29,7 @@ class ModalEditUser extends Component {
                 password: '',
                 firstName: '',
                 lastName: '',
+                phoneNumber:'',
                 address: ''
             }
         })
@@ -41,6 +43,7 @@ class ModalEditUser extends Component {
                 password: 'hashcode',
                 firstName: user.firstName,
                 lastName: user.lastName,
+                phoneNumber: user.phoneNumber,
                 address: user.address
             })
         }
@@ -62,7 +65,7 @@ class ModalEditUser extends Component {
 
     CheckValidateInput = () =>{
         let isValid = true;
-        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address'];
+        let arrInput = ['email', 'password', 'firstName', 'lastName','phoneNumber', 'address'];
         for(let i = 0; i < arrInput.length; i++){
             if(!this.state[arrInput[i]]){
                 isValid = false;
@@ -123,6 +126,13 @@ class ModalEditUser extends Component {
                                 />
                             </div>
                             <div className="input-container max-width-input">
+                                <label>Phone Number</label>
+                                <input type="number" 
+                                onChange={(event) => {this.handleOnChangeInput(event,"phoneNumber")}}
+                                value = {this.state.phoneNumber}
+                                />
+                            </div>
+                            <div className="input-container max-width-input">
                                 <label>Address</label>
                                 <input type="text" 
                                 onChange={(event) => {this.handleOnChangeInput(event,"address")}}
@@ -134,7 +144,7 @@ class ModalEditUser extends Component {
                             
                 </ModalBody>
                 <ModalFooter>
-                    <button color="primary" className="px-3" 
+                    <button color="primary" className="save px-3" 
                         onClick={() => {this.handleSaveUser()}}>
                         Save Changes
                         </button>

@@ -51,8 +51,7 @@ class Login extends Component {
                 }
             }
             
-        }
-       
+        } 
     }
 
     handleKeyDown = (event) =>{
@@ -67,11 +66,9 @@ class Login extends Component {
             <div className='login-background'>
                 <div className='login-container'>
                     <div className='login-content row'>
-
                         <div className='col-12 text-login'>
                             Login
                         </div>
-
                         <div className='col-12 form-group input-login'>
                             <label>User Name:</label>
                             <input type='text' className='form-control' 
@@ -84,9 +81,9 @@ class Login extends Component {
                         <div className='col-12 form-group input-login'>
                             <label>PassWord:</label>
                             <input type='password'   className='form-control'
-                             placeholder='Enter your password...'
-                             value={this.state.password}
-                             onChange={(event) => {this.handleOnchangePassword(event)}}
+                                placeholder='Enter your password...'
+                                value={this.state.password}
+                                onChange={(event) => {this.handleOnchangePassword(event)}}
                             onKeyDown={(event) => this.handleKeyDown(event)}
                              ></input>                           
 

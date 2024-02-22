@@ -5,7 +5,7 @@ import * as actions from '../../../store/actions';
 import {LANGUAGES} from '../../../utils';
 import Slider from 'react-slick';
 import { withRouter } from 'react-router';
-
+import '../Homepage.scss';
 class OutStandingDoctor extends Component{
 
     constructor(props){

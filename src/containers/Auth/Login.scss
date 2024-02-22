@@ -1,5 +1,14 @@
 .login-background{
-    background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    // //background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    // background-image: url(../../assets/images/bg.jpg) top center / cover no-repeat;;
+    // height: 100vh;
+    // background-position: center;
+    background: url(../../assets/images/bg.jpg)
+    top center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     height: 100vh;
 
     .login-container{
@@ -15,7 +24,11 @@
         right: 0;
         left: 0;
         font-family: cursive;
-
+        .login-content{
+            border-radius: 15px;
+            height: 420px;
+            background: rgba(255, 255, 255, 0.3);
+        }
         .text-login{    
             text-align: center;
             font-weight: 600;

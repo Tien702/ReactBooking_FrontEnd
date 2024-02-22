@@ -9,8 +9,7 @@ import About from './Session/About';
 import HomeFooter from './HomeFooter';
 
 import "./Homepage.scss";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 class HomePage extends Component {
 
@@ -26,10 +25,11 @@ class HomePage extends Component {
 
             <div>
                 <HomeHeader isShowBanner={true}/>
-                <OutStandingDoctor
-                    settings={settings}/>
                 <Specialty 
                     settings={settings}/>
+                <OutStandingDoctor
+                    settings={settings}/>
+                
                 <Clinic
                     settings={settings}/>
                 <HandBook

@@ -10,7 +10,7 @@ class About extends Component {
 
         return (
           <div className='home-footer'>
-                <p>&copy; 2023 KaiT.com - More information <a target='_blank' href='https://www.facebook.com/'>&#8594; Click Here &#8592;</a></p>
+                <p>&copy; 2023 KaiT.com - More information <a target='_blank' href='https://www.facebook.com/Tien702'>&#8594; Click Here &#8592;</a></p>
           </div>
         );
     }

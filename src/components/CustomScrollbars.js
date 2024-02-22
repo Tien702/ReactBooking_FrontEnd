@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Scrollbars } from 'react-custom-scrollbar';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import './CustomScrollbars.scss';
 

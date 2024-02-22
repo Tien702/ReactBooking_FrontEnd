@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import {getAllClinic} from '../../../services/userService';
 import Slider from 'react-slick';
 import { withRouter } from 'react-router';
-import clinicImg from "../../../assets/clinicImg/lo-go-viet-duc.jpg";
+//import clinicImg from "../../../assets/clinicImg/lo-go-viet-duc.jpg";
 
 class Clinic extends Component {
     constructor(props){

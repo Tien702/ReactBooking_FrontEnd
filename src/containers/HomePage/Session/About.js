@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
-import Iframe from 'react-iframe';
+//import Iframe from 'react-iframe';
 class About extends Component {
 
     render() {
@@ -15,12 +15,10 @@ class About extends Component {
                 </div>
                 <div className='section-about-content'>
                     <div className='content-left'>
-                        <Iframe width="100%" height="400px"
-                            src="https://www.youtube.com/watch?v=q5tqtHGx31k"
-                            title="Youtube"
-                            frameBorder="0"
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                            allowFullScreen />
+                        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/ulw4R87rvjs" 
+                            title="[25.01.2024] BRO vs GEN | Game 1 | Bình Luận Tiếng Việt | LCK Mùa Xuân 2024" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen></iframe>
                         
                     </div>
                     <div className='content-right'>

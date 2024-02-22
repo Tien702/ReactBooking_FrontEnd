@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
-import logob from '../../assets/logob.svg';
+import logob from '../../assets/images/logob.svg';
 import { FormattedMessage } from 'react-intl';
 import {LANGUAGES} from "../../utils";
 import {changeLanguageApp} from "../../store/actions";
