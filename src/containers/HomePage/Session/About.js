@@ -19,7 +19,7 @@ class About extends Component {
                             title="[25.01.2024] BRO vs GEN | Game 1 | Bình Luận Tiếng Việt | LCK Mùa Xuân 2024" 
                             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             allowfullscreen></iframe>
-                        
+                        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/2NYf6fVohLw?si=9lUWMTrYkBK29EyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                     </div>
                     <div className='content-right'>
                         <p>

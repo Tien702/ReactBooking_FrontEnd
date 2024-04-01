@@ -250,13 +250,14 @@ export const saveDetailDoctorAct = (data) =>{
                     type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
                 })
             }else{
-                toast.success("Save Info Detail Doctor failed!!!")
+                console.log('save error: ', res)
+                toast.error("Save Info Detail Doctor failed!!!")
                 dispatch({
                     type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED
                 })
             }
         } catch (e) {
-            toast.success("Save Info Detail Doctor failed!!!")
+            toast.error("Save Info Detail Doctor failed!!!")
             dispatch({
                 type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED
             })
@@ -275,7 +276,7 @@ export const fetchAllScheduleTime = () =>{
                     dataTime: res.data
                 })
             }else{
-                toast.success("Save Info Detail Doctor failed!!!")
+                toast.error("Save Info Detail Doctor failed!!!")
                 dispatch({
                     type: actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_FAILED
                 })

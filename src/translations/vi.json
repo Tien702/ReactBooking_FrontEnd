@@ -35,8 +35,8 @@
             
         },
         "doctor":{
-            "manage-schedule": "Quản Lý Kế Hoạch Khám Bệnh",
-            "manage-patient": "Quản Lý Danh Sách Bệnh Nhân"
+            "manage-schedule": "Quản Lý KH Khám Bệnh",
+            "manage-patient": "Quản Lý DS Bệnh Nhân"
         }
     },
     "manage-users":{
