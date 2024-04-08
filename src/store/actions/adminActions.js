@@ -293,22 +293,17 @@ export const fetchAllScheduleTime = () =>{
 export const getRequiredDoctorInfo = () =>{
     return async (dispatch, getState) =>{
         try {
-
             dispatch({ type: actionTypes.FETCH_REQUIRED_DOCTOR_INFO_START})
-
             let resPrice = await getAllcodeService("PRICE");
             let resPayment = await getAllcodeService("PAYMENT");
             let resProvince = await getAllcodeService("PROVINCE");
-            let resSpecialty = await getAllSpecialty();
             if(resPrice && resPrice.errCode === 0
                 && resPayment && resPayment.errCode === 0
-                && resProvince && resProvince.errCode === 0
-                && resSpecialty && resSpecialty.errCode === 0){
+                && resProvince && resProvince.errCode === 0){
                     let data = {
                             resPrice: resPrice.data,
                             resPayment: resPayment.data,
                             resProvince: resProvince.data,
-                            resSpecialty: resSpecialty.data
                     }
                     dispatch(fetchRequiredDoctorInfoSuccess(data))
             }else{
@@ -316,7 +311,7 @@ export const getRequiredDoctorInfo = () =>{
             }
         } catch (e) {
             dispatch(fetchRequiredDoctorInfoFailed());
-            console.log('check save user: ', e);
+            console.log('check save user43: ', e);
         }
     }
 }

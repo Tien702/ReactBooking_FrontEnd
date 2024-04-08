@@ -6,7 +6,7 @@ import { LANGUAGES } from "../../../utils";
 import moment from 'moment';
 import localization from 'moment/locale/vi';
 import { FormattedMessage } from 'react-intl';
-//import BookingModal from './Modal/BookingModal';
+import BookingModal from './Modal/BookingModal';
 
 class DoctorSchedule extends Component {
 
@@ -15,8 +15,8 @@ class DoctorSchedule extends Component {
         this.state = {
             allDays: [],
             allAvailableTime: [],
-            // isOpenModalBooking: false,
-            // dataScheduleTimeModal: {}
+            isOpenModalBooking: false,
+            dataScheduleTimeModal: {}
         }
     }
 
@@ -34,7 +34,7 @@ class DoctorSchedule extends Component {
 
     getArrdays = (language) =>{
         let allDays = []
-        for(let i =0; i < 7; i++){
+        for(let i = 0; i < 7; i++){
             let object = {};
             if(language === LANGUAGES.VI){
                 if(i === 0){
@@ -106,7 +106,7 @@ class DoctorSchedule extends Component {
     }
 
     render() {
-        let {allDays, allAvailableTime} = this.state;
+        let {allDays, allAvailableTime, isOpenModalBooking, dataScheduleTimeModal} = this.state;
         console.log('check availabeltime: ',this.state)
         let {language} = this.props;
         return (
@@ -171,11 +171,11 @@ class DoctorSchedule extends Component {
                             </div>
                         </div>
                 </div>
-                {/* <BookingModal
+                <BookingModal
                     isOpenModal={isOpenModalBooking}
                     closeBookingClose = {this.closeBookingClose}
                     dataTime={dataScheduleTimeModal}
-                /> */}
+                />
            </>
         );
     }
