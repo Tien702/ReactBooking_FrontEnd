@@ -13,7 +13,7 @@ import  Select from 'react-select';
 import { postPatientBookAppointment } from "../../../../services/userService";
 import { toast } from 'react-toastify';
 import moment from 'moment';
-//import LoadingOverlay from 'react-loading-overlay';
+import LoadingOverlay from 'react-loading-overlay';
 
 
 class BookingModal extends Component {
@@ -175,11 +175,11 @@ class BookingModal extends Component {
 
         return (
             <>
-             {/* <LoadingOverlay 
+             <LoadingOverlay 
                     active={this.state.isShowLoading}
                     spinner
                     text="Loading...."
-                > */}
+                >
                     <Modal
                         isOpen={isOpenModal}
                         className={'booking-modal-container'}
@@ -280,7 +280,7 @@ class BookingModal extends Component {
                             </div>
                         </div>
                     </Modal>
-                {/* </LoadingOverlay> */}
+                </LoadingOverlay>
             </>
            
 
