@@ -36,14 +36,6 @@ class Specialty extends Component {
     render() {
         
         let {dataSpecialty} =this.state;
-        // let settings = {
-        //     dots: false,
-        //     infinite: true,
-        //     speed: 500,
-        //     slidesToShow: 4,
-        //     slidesToScroll: 3
-        // };
-
         return (
             <div className='section-share section-specialty'>
                 <div className='section-container'>
