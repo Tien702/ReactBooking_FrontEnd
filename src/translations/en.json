@@ -60,7 +60,7 @@
         "handbook" : "Handbook",
         "specialty":"Specialty",
         "about":"Information about us",
-        "clinic":"Clinic"
+        "clinic":"List Clinic"
     },
     "manage-schedule":{
         "title":"Manage Doctor's Examination Plan",

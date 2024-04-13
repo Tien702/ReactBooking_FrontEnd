@@ -14,8 +14,6 @@ import { postPatientBookAppointment } from "../../../../services/userService";
 import { toast } from 'react-toastify';
 import moment from 'moment';
 import LoadingOverlay from 'react-loading-overlay';
-
-
 class BookingModal extends Component {
 
     constructor(props){
@@ -203,6 +201,8 @@ class BookingModal extends Component {
                                         doctorId={doctorId}
                                         isShowDescriptionDoctor={false}
                                         dataTime={dataTime}
+                                        isShowLinkDetail={false}
+                                        isShowPrice={true}
                                     />
                                 </div>
                                 <div className='price'>
