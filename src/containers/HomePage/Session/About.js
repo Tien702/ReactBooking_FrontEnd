@@ -3,11 +3,20 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import Iframe from 'react-iframe';
+import vtv from '../../../assets/images/About/vtv1.png';
+import dantri from '../../../assets/images/About/dantri.png';
+import boyte from '../../../assets/images/About/boyte.png';
+import vn from '../../../assets/images/About/vnexpress.png';
 class About extends Component {
 
-    render() {
-        
+    returnToHome = () =>{
+        if(this.props.history){
+            this.props.history.push(`/home`)
+        }
+    }
 
+    render() {
+    
         return (
           <div className=' section-share section-about'>
                 <div className='section-about-header'>
@@ -15,22 +24,17 @@ class About extends Component {
                 </div>
                 <div className='section-about-content'>
                     <div className='content-left'>
-                        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/ulw4R87rvjs" 
-                            title="[25.01.2024] BRO vs GEN | Game 1 | Bình Luận Tiếng Việt | LCK Mùa Xuân 2024" 
-                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen></iframe>
-                        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/2NYf6fVohLw?si=9lUWMTrYkBK29EyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jbv_oefhoa4?si=sIWpfeTlzSz5V2ZA" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
                     </div>
                     <div className='content-right'>
-                        <p>
-                        "...Mixigaming pubg gameplay lien minh 2017 lmht liên minh,pubg,battleground,
-                        battlegrounds,mixigaming
-                        Tags: Mixigaming, Mixi, Độ Tày, Streamer Mixigaming, Funny, Mixigaming Funny 
-                        Stream, Funny Stream, Streamer Việt Nam, Stream Việt Nam, Stream Việt, PUBG,
-                        Player Unknown's Battle Ground VN, PUBG VN, CSGO, CSGO VN, mixigaming vlog, 
-                        mixivlog, mixivlog#21, mixivlog21, vlog 21 mixigaming, mixigaming miền tây, 
-                        du lịch miền tây, ẩm thực miền tây, refundgaming miền tây.."
-                        </p>
+                        <img className='header-logo' src={vtv} onClick={() => this.returnToHome()}/>
+                        <img className='header-logo' src={dantri} onClick={() => this.returnToHome()}/>
+                        <img className='header-logo' src={boyte} onClick={() => this.returnToHome()}/>
+                        <img className='header-logo' src={vn} onClick={() => this.returnToHome()}/>
                     </div>
                 </div>
           </div>

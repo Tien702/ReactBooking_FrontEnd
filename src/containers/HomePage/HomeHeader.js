@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
-import logob from '../../assets/images/logob.svg';
+import logob from '../../assets/images/Logo.jpg';
+import vtv from '../../assets/images/About/vtv1.png';
+import dantri from '../../assets/images/About/dantri.png';
+import boyte from '../../assets/images/About/boyte.png';
+import vn from '../../assets/images/About/vnexpress.png';
 import { FormattedMessage } from 'react-intl';
 import {LANGUAGES} from "../../utils";
 import {changeLanguageApp} from "../../store/actions";

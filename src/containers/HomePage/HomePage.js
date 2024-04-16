@@ -31,8 +31,8 @@ class HomePage extends Component {
                     settings={settings}/>
                 <Clinic
                     settings={settings}/>
-                <HandBook
-                    settings={settings}/>
+                {/* <HandBook
+                    settings={settings}/> */}
                 <About/>
                 <HomeFooter/>
             </div>

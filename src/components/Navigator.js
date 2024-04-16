@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
+import {LANGUAGES} from "../utils"
 
 import './Navigator.scss';
 
