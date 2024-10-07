@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
 import logob from '../../assets/images/Logo.jpg';
-import vtv from '../../assets/images/About/vtv1.png';
-import dantri from '../../assets/images/About/dantri.png';
-import boyte from '../../assets/images/About/boyte.png';
-import vn from '../../assets/images/About/vnexpress.png';
+import bg1 from '../../assets/images/header-background.png';
+import bg2 from '../../assets/images/bg2.png';
+import bg3 from '../../assets/images/bg3.jpg';
+import bg4 from '../../assets/images/bg1.png';
+import user from '../../assets/images/avatar.png';
 import { FormattedMessage } from 'react-intl';
 import {LANGUAGES} from "../../utils";
 import {changeLanguageApp} from "../../store/actions";
 import { withRouter } from 'react-router';
-
+import Slider from 'react-slick';
 class HomeHeader extends Component {
-
+    
     changeLanguage = (language) =>{
         this.props.changeLanguageAppRedux(language);
     }
@@ -24,13 +25,22 @@ class HomeHeader extends Component {
     }
 
     render() {
+        
         let language = this.props.language;
+        var setting = {
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            pauseOnHover: true,
+          };
         return (
             <React.Fragment>
                 <div className='home-header-container'>
                 <div className='home-header-content'>
                     <div className='left-content'>
-                        <i className='fas fa-bars'></i>
                         <img className='header-logo' src={logob} onClick={() => this.returnToHome()}/>
                     </div>
                     <div className='center-content'>
@@ -46,10 +56,10 @@ class HomeHeader extends Component {
                             <div><b><FormattedMessage id='home-header.doctor'/></b></div>
                                 <div className='subs-title'><FormattedMessage id='home-header.chooseDoctor'/></div>
                             </div>
-                        <div className='child-content'>
+                        {/* <div className='child-content'>
                             <div><b><FormattedMessage id='home-header.examination'/></b></div>
                                 <div className='subs-title'><FormattedMessage id='home-header.checkHealth'/></div>
-                            </div>
+                            </div> */}
                     </div>
                     <div className='right-content'>
                         <div className='support'>
@@ -57,48 +67,20 @@ class HomeHeader extends Component {
                         </div>
                         <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}><span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span></div>
                         <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span></div>
+                        <div className='account'>
+                            <img src={user}/>                      
+                        </div>
                     </div>
                 </div>
                     </div>
                     {this.props.isShowBanner === true &&
                 <div className='home-header-banner'>
-                    <div className='content-up'> 
-                        <div className='title1'><FormattedMessage id='home-header.medical'/></div>
-                        <div className='title2'><FormattedMessage id='home-header.health'/></div>
-                        <div className='search'>
-                            <i className='fas fa-search'></i>
-                            <input type='text' placeholder="Tìm kiếm Bác Sĩ chuyên khoa xương khớp..." />
-                        </div>
-                    </div>
-                    <div className='content-down'>
-                        <div className='options'>
-                            <div className='options-child'>
-                                <div className='icon-child'><i className='far fa-hospital'></i></div>
-                                <div className='text-child'><FormattedMessage id='home-header.specialtyClinic'/></div>
-                            </div>
-                            <div className='options-child'>
-                                <div className='icon-child'><i className='fas fa-mobile-alt'></i></div>
-                                <div className='text-child'><FormattedMessage id='home-header.remote'/></div>
-                            </div>
-                            <div className='options-child'>
-                                <div className='icon-child'><i className='fas fa-procedures'></i></div>
-                                <div className='text-child'><FormattedMessage id='home-header.general'/></div>
-                            </div>
-                            <div className='options-child'>
-                                <div className='icon-child'><i className='fas fa-flask'></i></div>
-                                <div className='text-child'><FormattedMessage id='home-header.medicalTests'/></div>
-                            </div>
-                            <div className='options-child'>
-                                <div className='icon-child'><i className='fas fa-user-md'></i></div>
-                                <div className='text-child'><FormattedMessage id='home-header.mentalHealth'/></div>
-                            </div>
-                            <div className='options-child'>
-                                <div className='icon-child'><i className='fas fa-briefcase-medical'></i></div>
-                                <div className='text-child'><FormattedMessage id='home-header.dental'/></div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    <Slider {...setting}>
+                            <img src={bg1}/>        
+                            <img src={bg2}/>
+                            <img src={bg3}/>
+                            <img src={bg4}/>
+                    </Slider>
                 </div>
                  }
             </React.Fragment>

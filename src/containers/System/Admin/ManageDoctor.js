@@ -176,12 +176,7 @@ class ManageDoctor extends Component {
         })
      }
 
-    handleEditorChange = ({html, text}) =>{
-        this.setState({
-            contentMarkdown: text,
-            contentHTML: html,
-        });
-    }
+    
     handleChangeSelect = async (selectedOption) => {
         this.setState({
             selectedOption
@@ -229,7 +224,6 @@ class ManageDoctor extends Component {
                 contentMarkdown: markdown.contentMarkdown,
                 description: markdown.description,
                 
-                
                 addressClinic: addressClinic,
                 nameClinic: nameClinic,
                 note: note,
@@ -261,11 +255,11 @@ class ManageDoctor extends Component {
         }
         
     }
-    handleOnChangeDesc = (event) =>{
-        this.setState({
-            description: event.target.value
-        })
-    }
+    // handleOnChangeDesc = (event) =>{
+    //     this.setState({
+    //         description: event.target.value
+    //     })
+    // }
 
     handleChangeSelectDoctorInfo = async(selectedOption, name) =>{
         let stateName = name.name;
@@ -275,6 +269,7 @@ class ManageDoctor extends Component {
             ...stateCopy
         })
     }
+
     handleOnChangeText = (event, id) =>{
         let stateCopy = { ...this.state};
         stateCopy[id] = event.target.value;
@@ -282,9 +277,17 @@ class ManageDoctor extends Component {
             ...stateCopy
         })
     }
+
+    handleEditorChange = ({html, text}) =>{
+        this.setState({
+            contentMarkdown: text,
+            contentHTML: html,
+        });
+    }
+    
      render() {
         let { hasOldData} = this.state;
-        console.log("Checking: ", this.state)
+        console.log("Checking hasolData: ", this.state)
          return (
            <div className='manage-doctor-container'>
                 <div className='manage-doctor-title'>

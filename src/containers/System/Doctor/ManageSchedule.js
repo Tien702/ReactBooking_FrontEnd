@@ -29,6 +29,7 @@ class ManageSchedule extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot){
+
         if(prevProps.allDoctors !== this.props.allDoctors){
             let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
             this.setState({
@@ -51,7 +52,7 @@ class ManageSchedule extends Component {
         let result = [];
         let { language } = this.props;
         if(inputData && inputData.length > 0){
-            inputData.map((item, index) =>{
+            inputData.map((item, index) => {
                 let object = {};
                 let labelVi = `${item.lastName} ${item.firstName}`;
                 let labelEn = `${item.firstName} ${item.lastName}`;
@@ -64,7 +65,7 @@ class ManageSchedule extends Component {
         return result;
     }
 
-    handleChangeSelect = async (selectedOption) => {
+    handleChangeSelectDoctor = async (selectedOption) => {
         this.setState({
             selectedDoctor : selectedOption
         });
@@ -81,17 +82,18 @@ class ManageSchedule extends Component {
             rangeTime = rangeTime.map(item =>{
                 if(item.id === time.id) item.isSelected = !item.isSelected;
                 return item;
+                
             })
             this.setState({
                 rangeTime: rangeTime
             })
         }
+        
     }
 
     handleSaveSchedule = async () =>{
         let {rangeTime, selectedDoctor, currentDate } = this.state;
         let result = [];
-        console.log('check state: ', this.state)
         if(!currentDate){
             toast.error("Invalid date!");
             return;
@@ -123,8 +125,6 @@ class ManageSchedule extends Component {
             doctorId: selectedDoctor.value,
             formatedDate: formatedDate
         })
-        console.log("check res: saveBulkScheduleDoctor ", res);
-        console.log("check result: ", result);
         if(res && res.errCode === 0){
             toast.success("Save Success!");
         }else{
@@ -134,6 +134,7 @@ class ManageSchedule extends Component {
 
     render() {
         let {rangeTime } = this.state;
+        console.log('ngu',rangeTime);
         let { language } = this.props;
         let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
         return (
@@ -147,7 +148,7 @@ class ManageSchedule extends Component {
                             <label><FormattedMessage id="manage-schedule.choose-doctor"/></label>
                             <Select
                                 value={this.state.selectedDoctor}
-                                onChange={this.handleChangeSelect}
+                                onChange={this.handleChangeSelectDoctor}
                                 options={this.state.listDoctors}
                             />
                         </div>

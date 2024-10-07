@@ -27,8 +27,6 @@ export const fetchGenderStart = () => {
     }
   
 }
-
-
 export const fetchGenderSuccess = (genderData) => ({
     type: actionTypes.FETCH_GENDER_SUCCESS,
     data: genderData

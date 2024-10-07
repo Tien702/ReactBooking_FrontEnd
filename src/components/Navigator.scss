@@ -8,10 +8,11 @@
     .list-unstyled {
         list-style-type: none;
     }
-    .menu-group {
+    li.menu-group {
         &:hover {
             cursor: pointer;
-            background-color: darken($colormain, 5);
+            background-color: #ffffff;
+            color: #000000;
         }
         .menu-group-name {
             line-height: 40px;
@@ -38,9 +39,9 @@
 
                 &.active{
                     a{
-                        color: orange !important;
+                        color: #000000 !important;
                     }
-                    background-color: #ededed;
+                    background-color: #00bde8;
                 }
                 .menu-link {
                     text-decoration: none;
@@ -61,7 +62,7 @@
                         line-height: 35px;
                         white-space: nowrap;
                         &:hover {
-                            background-color: darken($bg-menu-color, 5);
+                            background-color: #000000;
                         }
                         .sub-menu-link {
                             text-decoration: none;

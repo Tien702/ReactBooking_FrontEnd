@@ -18,7 +18,7 @@ class HomePage extends Component {
             dots: false,
             infinite: false,
             speed: 500,
-            slidesToShow: 4,
+            slidesToShow: 3,
             slideToScroll: 2
         };
         return (

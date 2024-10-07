@@ -1,0 +1,10 @@
+.content-right{
+    display: flex;
+    .content-right-top{
+        display: grid;
+        margin-right: 30px;
+    }
+    .content-right-bottom{
+        display: grid;
+    }
+}
