@@ -1,6 +1,6 @@
 
 .home-header-container{
-    height: 60px;
+    height: 85px;
     width: 100%;
     padding: 0 40px;
     position: sticky;
@@ -96,7 +96,8 @@
 }
 .home-header-banner{
     // background-image: url('../../assets/images/header-background.png');
-    width: 1450px;
+    width: 1650px;
+    margin-top: 20px;
     margin: auto ;
     .slick-slider{
         button.slick-next{
@@ -112,7 +113,7 @@
         cursor: pointer;
         background-size: cover;
         background-position: center;
-        height: 485px;
+        height: 685px;
         background-repeat: no-repeat;
         flex-direction: column;
         width: 800px;

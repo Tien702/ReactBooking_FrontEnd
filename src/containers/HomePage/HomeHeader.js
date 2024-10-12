@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
 import logob from '../../assets/images/Logo.jpg';
-import bg1 from '../../assets/images/header-background.png';
-import bg2 from '../../assets/images/bg2.png';
-import bg3 from '../../assets/images/bg3.jpg';
-import bg4 from '../../assets/images/bg1.png';
+import bg1 from '../../assets/images/bg1.jpg';
+import bg2 from '../../assets/images/bg2.jpg';
 import user from '../../assets/images/avatar.png';
 import { FormattedMessage } from 'react-intl';
 import {LANGUAGES} from "../../utils";
@@ -56,10 +54,6 @@ class HomeHeader extends Component {
                             <div><b><FormattedMessage id='home-header.doctor'/></b></div>
                                 <div className='subs-title'><FormattedMessage id='home-header.chooseDoctor'/></div>
                             </div>
-                        {/* <div className='child-content'>
-                            <div><b><FormattedMessage id='home-header.examination'/></b></div>
-                                <div className='subs-title'><FormattedMessage id='home-header.checkHealth'/></div>
-                            </div> */}
                     </div>
                     <div className='right-content'>
                         <div className='support'>
@@ -78,8 +72,7 @@ class HomeHeader extends Component {
                     <Slider {...setting}>
                             <img src={bg1}/>        
                             <img src={bg2}/>
-                            <img src={bg3}/>
-                            <img src={bg4}/>
+                           
                     </Slider>
                 </div>
                  }
