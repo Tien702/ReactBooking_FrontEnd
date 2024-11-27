@@ -41,7 +41,9 @@ class Specialty extends Component {
                 <div className='section-container'>
                     <div className='section-header'>
                         <span className='title-section'><FormattedMessage id='homepage.specialty'/> </span>
-                        <button className='btn-section'> <FormattedMessage id='homepage.more-info'/></button>
+                       <p className='title-outstanding-doctor'>
+                       "Chuyên khoa Răng Hàm Mặt – Tận tâm chăm sóc nụ cười và sức khỏe răng miệng của bạn..."
+                       </p>
                     </div>
                     <div className='section-body'>
                     <Slider {...this.props.settings}>

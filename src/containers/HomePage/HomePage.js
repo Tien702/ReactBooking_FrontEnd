@@ -7,7 +7,10 @@ import OutStandingDoctor from "./Session/OutStandingDoctor";
 import HandBook from './Session/HandBook';
 import About from './Session/About';
 import HomeFooter from './HomeFooter';
-
+import InfoPage from "./Session/InfoPage";
+import Chooseme from "./Session/Chooseme"
+import Count from "./Session/Count";
+import BookingSession from "./Session/BookingSession";
 import "./Homepage.scss";
 
 
@@ -15,26 +18,35 @@ class HomePage extends Component {
 
     render() {
         let settings = {
-            dots: false,
-            infinite: false,
-            speed: 500,
-            slidesToShow: 3,
-            slideToScroll: 2
+            dots: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            pauseOnHover: true,
         };
+        
         return (
 
             <div>
+                
                 <HomeHeader isShowBanner={true}/>
+                <InfoPage/>
+                <Chooseme/>
+                <Count/>
                 <OutStandingDoctor
                     settings={settings}/>
                 <Specialty 
                     settings={settings}/>
+                 {/* <BookingSession/> */}
                 {/* <Clinic
                     settings={settings}/> */}
                 {/* <HandBook
                     settings={settings}/> */}
                 <About/>
                 <HomeFooter/>
+              
             </div>
         );
     }

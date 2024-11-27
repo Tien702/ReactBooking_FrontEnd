@@ -321,7 +321,26 @@ export const getRequiredDoctorInfo = () =>{
         }
     }
 }
-
+export const getAllSeclectSpec =() =>{
+    return async (dispatch, getState) =>{
+        try {
+            let resSelectSpec = await getAllcodeService("SELECTSPEC");
+            if(resSelectSpec && resSelectSpec.errCode === 0){
+                    let data = {
+                        resSelectSpec: resSelectSpec.data,
+                    }
+                    dispatch( dispatch({
+                        type: actionTypes.FETCH_REQUIRED_ALL_CODE_SUCCESS,
+                        dataSpec: resSelectSpec.data
+                    }))
+            }else{
+                dispatch({type: actionTypes.FETCH_REQUIRED_ALL_CODE_FAILED});
+            }
+        } catch (e) {
+            dispatch({type: actionTypes.FETCH_REQUIRED_ALL_CODE_FAILED});
+        }
+    }
+}
 export const fetchRequiredDoctorInfoSuccess = (allRequiredData) => ({
     type: actionTypes.FETCH_REQUIRED_DOCTOR_INFO_SUCCESS,
     data: allRequiredData

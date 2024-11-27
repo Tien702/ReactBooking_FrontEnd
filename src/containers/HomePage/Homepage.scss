@@ -1,3 +1,7 @@
+.wrapper{
+    position: absolute;
+}
+
 .slick-prev{
 
     left: -10px !important;
@@ -7,7 +11,8 @@
 
     background: #fff !important;
     border: 2px solid #d7d7d7d7 !important;
-
+    content: '<' !important;
+   
     &:hover{
         background: #bcbcbc !important;
     }
@@ -20,14 +25,17 @@
     width: 44px !important;
     background: #fff !important;
     border: 2px solid #d7d7d7d7 !important;
-
+   
+   
     &:hover{
         background: #bcbcbc !important;
     }
 }
 .slick-prev:before, .slick-next:before{
     font-family: FontAwesome  !important;
-    color: red !important;
+    color: rgb(49, 194, 238) !important;
+    font-weight: 400;
+    font-size: 33px !important;
    
 }
 .slick-dots{
@@ -41,13 +49,12 @@
 
     margin: auto;
     margin-top: 20px;
-    border-radius: 30px;
-    width: 1320px;
-    background-color: #d4e6f1;
+    border-radius: 0px;
+    width: 90%;
+    background-color: #fafafa;
     &.section-about{
-        border-top: 1px solid grey;
-        border-bottom: 1px solid gray;
-        height: 500px !important;
+        
+        height: 140px !important;
 
     }
     .section-body{
@@ -63,9 +70,6 @@
                 background-color: #eee;
                 
                 &.section-specialty{                  
-                    cursor: pointer;
-                }
-                &.section-clinic{    
                     cursor: pointer;
                 }
                 &.section-outstanding-doctor{
@@ -91,7 +95,7 @@
 }
 
 .section-share{
-    height: 330px;
+    height: 400px;
 
     .section-container{
         margin: 0 100px;
@@ -101,27 +105,15 @@
         .section-header{
             height: 60px;
             margin-bottom: 30px;
-            padding-top: 30px;
+            text-align: center;
             .title-section{
-                font-size: 22px;
+                font-size: 29px;
                 font-weight: 600;
+                font-family: monospace;
             }
-
-            .btn-section{
-                float: right;
-                padding: 10px 15px;
-                border: none;
-                outline: none;
-                display: block;
-                background: #ebebeb;
-                color: black;
-                cursor: pointer;
-                text-transform: uppercase;
-
-                &:hover{
-                    background: #f7d800;
-                    color: #fff;
-                }
+            .title-outstanding-doctor{
+                color: #737983 !important;
+                font-size: 13px;
             }
         }
 
@@ -131,13 +123,18 @@
     
 }
 
-
-.section-outstanding-doctor{
+.info-layout{
     margin: auto;
     margin-top: 28px;
     border-radius: 30px;
-    width: 1320px;
-    background-color: #d4e6f1;
+    background-color: #ffffff;
+}
+.section-outstanding-doctor{
+    margin: auto;
+    margin-top: 18px;
+    border-bottom: 1px solid black;
+    width: 90%;
+    background-color: #fafafa;
     .outer-bg{
         display: flex;
         justify-content: center;
@@ -155,7 +152,6 @@
 .section-about{
     margin: auto;
     margin-top: 28px;
-    border-radius: 30px;
     width: auto !important;
     background-color: #d4e6f1;
     padding: 0 100px;

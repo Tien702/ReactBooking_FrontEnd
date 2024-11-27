@@ -37,12 +37,12 @@ class OutStandingDoctor extends Component{
             <div className='section-share section-outstanding-doctor'>
                 <div className='section-container'>
                     <div className='section-header'>
-
                         <span className='title-section'>
-                        <FormattedMessage id='homepage.outstanding-doctor'/></span>
-                        <button className='btn-section'>
-                        <FormattedMessage id='homepage.more-info'/>
-                        </button>
+                            <FormattedMessage id='homepage.outstanding-doctor'/>
+                        </span>
+                        <p className='title-outstanding-doctor'>
+                            " Đội ngủ Nha sĩ - chuyên gia hàng nhiều năm kinh nghiệm với tay nghề cao của Nha Khoa Minh Tiến..."
+                        </p>
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>
@@ -64,7 +64,7 @@ class OutStandingDoctor extends Component{
                                             </div>
                                             <div className='position text-center'>
                                                 <div>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
-                                                <div>Cơ Xương Khớp</div>
+                                                {/* <div>Cơ Xương Khớp</div> */}
                                             </div>                            
                                         </div>                                           
                                     </div>

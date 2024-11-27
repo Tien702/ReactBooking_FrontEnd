@@ -16,14 +16,6 @@ export const adminMenu = [
 
         ]
     },
-    { //Quản Lý phòng khám
-        name: 'menu.admin.clinic',
-            menus: [
-                {
-                    name: 'menu.admin.manage-clinic',  link: '/system/manage-clinic'
-                }
-        ]
-    },
     { //Quản Lý chuyên khoa
         name: 'menu.admin.specialty',
             menus: [
@@ -37,7 +29,7 @@ export const adminMenu = [
         name: 'menu.admin.handbook',
             menus: [
                 {
-                    name: 'menu.admin.manage-handbook',  link: '/admin/manage-handbook'
+                    name: 'menu.admin.manage-handbook',  link: '/system/manage-handbook'
                 },
                 
         ]

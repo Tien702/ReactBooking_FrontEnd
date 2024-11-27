@@ -195,7 +195,7 @@ class UserRedux extends Component {
         return (
             <div className='user-redux-container'>
                 <div className='title'>
-                   Create User Redux With KaiT
+                   Create User 
                 </div>
                 <div className="user-redux-body">
                 <div className='container'>
@@ -331,7 +331,7 @@ class UserRedux extends Component {
                             </div>
                             <div className='col-12 mb-5'>
                                 <div className='title'>
-                                        Table User Redux By KaiT
+                                        Table User
                                 </div>
                                 <TableManageUser
                                 handleEditUserFromParentKey = {this.handleEditUserFromParent}

@@ -9,7 +9,8 @@ const initialState = {
     topDoctors:[],
     allDoctors: [],
     allScheduleTime: [],
-    allRequiredDoctorInfo: []
+    allRequiredDoctorInfo: [],
+    AllSeclectSpec:[]
 }
 
 const adminReducer = (state = initialState, action) => {
@@ -101,6 +102,17 @@ const adminReducer = (state = initialState, action) => {
             }
         case actionTypes.FETCH_REQUIRED_DOCTOR_INFO_FAILED: 
             state.allRequiredDoctorInfo=[];
+            return {
+                ...state
+            }
+        case actionTypes.FETCH_REQUIRED_ALL_CODE_SUCCESS: 
+            state.AllSeclectSpec = action.dataSpec;
+            console.log("checking lai ngu", action);
+            return {
+                ...state
+            }
+        case actionTypes.FETCH_REQUIRED_ALL_CODE_FAILED: 
+            state.AllSeclectSpec=[];
             return {
                 ...state
             }

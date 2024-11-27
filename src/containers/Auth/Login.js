@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from "connected-react-router";
-
 import * as actions from "../../store/actions";
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
@@ -63,58 +62,30 @@ class Login extends Component {
     render() {
         //JSX
         return (
-            <div className='login-background'>
-                <div className='login-container'>
-                    <div className='login-content row'>
-                        <div className='col-12 text-login'>
-                            Login
-                        </div>
-                        <div className='col-12 form-group input-login'>
-                            <label>User Name:</label>
-                            <input type='text' className='form-control' 
-                            placeholder='Enter your username...'
+          <div className='bofy'>
+                <div className="glass-container">
+                    <div className="login-box">
+                        <h2 className='title-login'>Login</h2>
+                        <form >
+                            <input type="text" required placeholder="Username"   
                             value={this.state.username}
-                            onChange={(event) => {this.handleOnchangeUsername(event)}}
-                            ></input>
-                        </div>
+                            onChange={(event) => {this.handleOnchangeUsername(event)}}/>
 
-                        <div className='col-12 form-group input-login'>
-                            <label>PassWord:</label>
-                            <input type='password'   className='form-control'
-                                placeholder='Enter your password...'
+                            <input type="password" required placeholder="Password"  
                                 value={this.state.password}
                                 onChange={(event) => {this.handleOnchangePassword(event)}}
-                            onKeyDown={(event) => this.handleKeyDown(event)}
-                             ></input>                           
+                                onKeyDown={(event) => this.handleKeyDown(event)}/>
 
-                        </div>
-
-                        <div className='col-12' style={{color: 'red'}}>
+                        <div className='texterr' style={{color: 'white'}}>
                             {this.state.errMessage}
                         </div>
-
-                        <div className='col-12 '>
-                            <button className='btn-login' onClick={() => {this.handleLogin()}}>Login</button> 
-                        </div>
-                           
-                        <div className='col-12 forgot-login'>
-                            <span>Forgot your password?</span>
-                        </div>
-
-                        <div className='col-12 text-center mt-3'>
-                            <span className='text-other-login'> Or Login With: </span>
-                        </div>
-
-                        <div className='col-12 social-login'>
-
-                            <i className='fab fa-google-plus-g google'></i>
-                            <i className='fab fa-facebook-f fb'></i>
-                            <i className='fab fa-instagram insta'></i>
-
-                        </div>
+                        <button className='btn-login' onClick={() => {this.handleLogin()}}>Login</button>
+                        
+                        </form>
                     </div>
                 </div>
-            </div>
+          </div>
+          
         )
     }
 }

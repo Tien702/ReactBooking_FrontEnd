@@ -377,7 +377,7 @@ class ManageDoctor extends Component {
                         />
                     </div>
 
-                    <div className='col-4 form-group pb-3'>
+                    {/* <div className='col-4 form-group pb-3'>
                         <label><FormattedMessage id="admin.manage-doctor.select-clinic"/></label>
                         <Select
                             value={this.state.selectedClinic}
@@ -386,7 +386,7 @@ class ManageDoctor extends Component {
                             onChange={this.handleChangeSelectDoctorInfo}
                             name='selectedClinic'
                         />
-                    </div>
+                    </div> */}
                 </div>
                 <div className='manage-doctor-editor'>
                         <MdEditor

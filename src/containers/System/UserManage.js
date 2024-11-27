@@ -122,7 +122,7 @@ class UserManage extends Component {
                         editUser={this.doEditUser}
                     />
                 }
-                <div className='title text-center'>Manage users with KAIT</div>
+                <div className='title text-center'>Manage users</div>
                 <div className='mx-1'>
                     <button 
                     className='btn btn-primary px-3'

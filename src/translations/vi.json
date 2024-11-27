@@ -17,7 +17,9 @@
         "medicalTests": "Xét Nghiệm Y Học",
         "mentalHealth": "Sức Khỏe Tinh Thần",
         "dental": "Khám Nha Khoa",
-        "welcome": "Xin Chào"
+        "welcome": "Xin Chào",
+        "count":"Bảng Giá",
+        "aboutme":"Về Chúng Tôi"
     },
     "menu": {
         "admin":{
@@ -56,7 +58,7 @@
         "edit": "Lưu Thay Đổi"
     },
     "homepage":{
-        "outstanding-doctor": "Bác Sĩ Nổi Tiếng Tuần Qua",
+        "outstanding-doctor": "Nha Sĩ - Chuyên Gia",
         "more-info":"Xem Thêm ",
         "handbook" : "Cẩm Nang",
         "specialty":"Chuyên Khoa",
